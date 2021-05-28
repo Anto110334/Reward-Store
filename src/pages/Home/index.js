@@ -1,23 +1,41 @@
 import { useState, useEffect } from 'react';
-import { Product } from '../../components';
-import { productsData } from '../../services/product';
+import { userData, productsData } from '../../services';
+// import { Product } from '../../components';
 
 const Home = () => {
   const [products, setProducts] = useState({
     status: 'pending...',
     data: null,
   });
+  const [user, setUser] = useState({
+    status: 'pending...',
+    data: null,
+  });
 
   useEffect(() => {
     const getAllProducts = async () => {
-      const data = await productsData();
-      if (data) {
+      const dataProducts = await productsData();
+      const dataUser = await userData();
+
+      if (dataProducts) {
         setProducts({
           status: 'success!',
-          data,
+          data: dataProducts,
         })
+        setUser({
+          status: 'success!',
+          data: dataUser,
+        })
+
+        console.log("user data: ", user?.data);
+        console.log("products data: ", products?.data);
+
       } else {
         setProducts({
+          status: 'error!',
+          data: null,
+        })
+        setUser({
           status: 'error!',
           data: null,
         })
@@ -26,21 +44,27 @@ const Home = () => {
     getAllProducts();
   }, []);
 
-  const productsList = products?.data.map(product => {
-    return (
-      <Product
-        key={product?._id}
-        name={product?.name}
-        category={product?.category}
-        alt={product?.name}
-        photo={product?.img?.url}
-      />
-    )
-  })
+  // const productsList = products?.data.map(product => {
+  //   return (
+  //     <Product
+  //       key={product?._id}
+  //       name={product?.name}
+  //       category={product?.category}
+  //       alt={product?.name}
+  //       photo={product?.img?.url}
+  //     />
+  //   );
+  // });
+
+  /* TODO: descomentar esto y ver cómo manejar el tiempo de la response */
 
   return (
     <div>
-      {productsList}
+      {/* {products?.status === 'pending...' && products?.data === null ? <span>Loading...</span> : (
+        products?.status === 'error!' && products?.data === null ? <span>Result not found</span> : (
+          products?.status === 'success!' && products?.data ? productsList : null
+        )
+      )} */}
     </div>
   );
 }

@@ -1,3 +1,5 @@
+// import { StyledTitle } from './Product.style';
+
 const Product = props => {
   const {
     name,
