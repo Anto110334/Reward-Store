@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import baseTheme from '../../themes/baseTheme';
 
 export const StyledNavbar = styled.div`
-  height: 5rem;
+  height: auto;
   width: 100%;
   padding: 1.4rem 2.5rem;
   display: flex;

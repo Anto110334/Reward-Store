@@ -1,10 +1,10 @@
-import { StyledBanner, StyledBannerTitle, StyledBannerImage } from './banner.style';
+import { StyledBanner, StyledBannerImage } from './banner.style';
 
 const Banner = props => {
-  const { title, banner } = props;
+  const { banner } = props;
+
   return (
     <StyledBanner>
-      <StyledBannerTitle>{title}</StyledBannerTitle>
       <StyledBannerImage alt="banner" src={banner}/>
     </StyledBanner>
   );

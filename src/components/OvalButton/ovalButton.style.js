@@ -1,27 +1,39 @@
 import styled, { css } from 'styled-components';
 import baseTheme from '../../themes/baseTheme';
 
-export const StyledButton = styled.button(({ disabled, variant }) => {
-  const variantsStyles = {
-    points: `
-      color: ${baseTheme.colors.darkGrey};
-      background-color: ${baseTheme.colors.lightGrey};
-    `,
-    navbar: `
-      color: ${baseTheme.colors.white};
-      background-color: ${baseTheme.colors.lightBlue};
-  
-      &:hover {
-        background-color: ${baseTheme.colors.lightBlue2};
-      }
-    `,
-  }
-
-  const variantsStylesDisabled = {
-    navbar: `
-      color: ${baseTheme.colors.disabledGrey};
-      background-color: ${baseTheme.colors.lightGrey};
-    `,
+export const StyledButton = styled.button(({ active, variant }) => {
+  const changeVariants = variant => {
+    switch (variant) {
+      case 'points':
+        return (
+          css`
+            color: ${baseTheme.colors.darkGrey};
+            background-color: ${baseTheme.colors.lightGrey};
+          `
+        )
+      case 'navbar':
+        return (
+          css`
+            color: ${active ? baseTheme.colors.white : baseTheme.colors.disabledGrey};
+            background-color: ${active ? baseTheme.colors.lightBlue : baseTheme.colors.lightGrey};
+            &:active{
+              color: ${baseTheme.colors.white};
+              background-color: ${baseTheme.colors.lightBlue};
+            }
+            &:hover {
+              color: ${baseTheme.colors.white};
+              background-color: ${baseTheme.colors.lightBlue2};
+            }
+          `
+        )
+      default:
+        return (
+          css`
+            color: ${baseTheme.colors.darkGrey};
+            background-color: ${baseTheme.colors.lightGrey};
+          `
+        )
+    }
   }
   
   return css`
@@ -37,7 +49,7 @@ export const StyledButton = styled.button(({ disabled, variant }) => {
     height: 100%;
     display: flex;
     align-items: center;
-    ${disabled ? variantsStylesDisabled[variant] : variantsStyles[variant]};
+    ${changeVariants(variant)};
   `;
   },
 );
@@ -51,3 +63,5 @@ export const StyledPoints = styled.div`
     margin: 3px 0 0 5px;
   }
 `;
+
+/* ${withPoints ? variantsStyles[variant] : ''}; */ 

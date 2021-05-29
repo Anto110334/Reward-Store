@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { userData, productsData } from '../../services';
+import { productsData } from '../../services';
 import { Product } from '../../components';
 
 const Home = () => {
