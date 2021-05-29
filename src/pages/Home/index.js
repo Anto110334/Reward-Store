@@ -22,19 +22,20 @@ const Home = () => {
           status: 'success!',
           data: dataProducts,
         })
-        setUser({
-          status: 'success!',
-          data: dataUser,
-        })
-
-        console.log("user data: ", user?.data);
         console.log("products data: ", products?.data);
-
       } else {
         setProducts({
           status: 'error!',
           data: null,
         })
+      }
+      if (dataUser) {
+        setUser({
+          status: 'success!',
+          data: dataUser,
+        })
+        console.log("user data: ", user?.data);
+      } else {
         setUser({
           status: 'error!',
           data: null,
