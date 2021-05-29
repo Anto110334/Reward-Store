@@ -1,4 +1,7 @@
-// import { StyledTitle } from './Product.style';
+import HoverProduct from './HoverProduct';
+import LackOfPoint from './LackOfPoint';
+import { CardContainerStyled,
+         InfoStyled } from './Product.style';
 
 const Product = props => {
   const {
@@ -6,14 +9,25 @@ const Product = props => {
     category,
     alt,
     photo,
+    cost,
+    UserPoints
   } = props;
 
+  const lack = cost >= UserPoints;
+
   return (
-    <div>
-      <h3>{name}</h3>
-      <span>{category}</span>
-      <img alt={alt} src={photo}/>
-    </div>
+    <CardContainerStyled lack={lack}>
+      {
+        lack ? <LackOfPoint/> :  <HoverProduct/>
+      }
+      <InfoStyled>
+        <img alt={alt} src={photo}/>
+        <div>
+          <span>{category}</span>
+          <h3>{name}</h3>
+        </div>
+      </InfoStyled>
+    </CardContainerStyled>
   );
 }
 
