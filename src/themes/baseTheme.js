@@ -1,11 +1,17 @@
 const colors = {
   white: '#ffffff',
   black: '#000000',
+  lightGrey: '#ededed',
+  darkGrey: '#616161',
+  disabledGrey: '#a3a3a3',
+  lightBlue: '#0ad4fa',
+  lightBlue2: '#25bbf1',
 };
 
 const typography = {
   fonts: {
-    primary: 'Arial',
+    primary: 'Source Sans Pro',
+    secondary: 'sans-serif',
   },
   rootFontSize: '1.14rem',
   sizes: {

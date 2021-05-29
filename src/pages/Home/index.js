@@ -7,16 +7,10 @@ const Home = () => {
     status: 'pending...',
     data: [],
   });
-  const [user, setUser] = useState({
-    status: 'pending...',
-    data: [],
-  });
-
   
   useEffect(() => {
     const getAllProducts = async () => {
       const dataProducts = await productsData();
-      const dataUser = await userData();
       if (dataProducts) {
         setProducts({
           status: 'success!',
@@ -24,17 +18,6 @@ const Home = () => {
         })
       } else {
         setProducts({
-          status: 'error!',
-          data: [],
-        })
-      }
-      if (dataUser) {
-        setUser({
-          status: 'success!',
-          data: dataUser,
-        })
-      } else {
-        setUser({
           status: 'error!',
           data: [],
         })
