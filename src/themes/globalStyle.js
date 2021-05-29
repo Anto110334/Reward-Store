@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: ${baseTheme.typography.fonts.primary};
+    font-family: ${baseTheme.typography.fonts.primary}, ${baseTheme.typography.fonts.primary};
   }
 `;
 

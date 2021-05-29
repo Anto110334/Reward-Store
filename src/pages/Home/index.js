@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { userData, productsData } from '../../services';
+import { productsData } from '../../services';
 import { Product } from '../../components';
 import usePagination from '../../hooks/usePagination';
 import { ContainerStyled } from './HomeStyle';
@@ -19,7 +19,6 @@ const Home = () => {
   useEffect(() => {
     const getAllProducts = async () => {
       const dataProducts = await productsData();
-      const dataUser = await userData();
       if (dataProducts) {
         setProducts({
           status: 'success!',
@@ -27,17 +26,6 @@ const Home = () => {
         })
       } else {
         setProducts({
-          status: 'error!',
-          data: [],
-        })
-      }
-      if (dataUser) {
-        setUser({
-          status: 'success!',
-          data: dataUser,
-        })
-      } else {
-        setUser({
           status: 'error!',
           data: [],
         })
