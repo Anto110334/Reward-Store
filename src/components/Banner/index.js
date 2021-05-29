@@ -1,8 +1,12 @@
-const Banner = () => {
+import { StyledBanner, StyledBannerTitle, StyledBannerImage } from './banner.style';
+
+const Banner = props => {
+  const { title, banner } = props;
   return (
-    <div>
-      Banner
-    </div>
+    <StyledBanner>
+      <StyledBannerTitle>{title}</StyledBannerTitle>
+      <StyledBannerImage alt="banner" src={banner}/>
+    </StyledBanner>
   );
 }
 

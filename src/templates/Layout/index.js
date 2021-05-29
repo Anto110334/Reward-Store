@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
           points={user.data.points}
           variant="points"
         />
-        <Banner />
+        <Banner title="Electronics" banner="/assets/header-x2.png" />
         <Navbar />
       </header>
       <StyledLayoutChildren>
