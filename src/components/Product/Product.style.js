@@ -7,9 +7,11 @@ export const CardContainerStyled = styled.div`
   height: 276px;
   background: #FFFFFF;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 24px;
+  margin: 12px;
+  transition: all 0.4s ease-out;
   &:hover{
     ${({lack}) => lack === false ? "transform: translateY(-20px)" : ""};
+    transition: all 0.4s ease-out;
   }
 `;
 
