@@ -23,3 +23,26 @@ export const LackOfPointContainerStyled = styled.div`
     font-weight: 300;
   }
 `;
+
+export const PriceStyled = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  >h2{
+    font-size: 14px;
+    line-height: 18px;
+    text-align: right;
+    letter-spacing: -0.0329412px;
+    color: #FFFFFF;
+    font-weight: 300;
+  }
+  >img{
+    margin: .4rem 0 .2rem .3rem;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+`;

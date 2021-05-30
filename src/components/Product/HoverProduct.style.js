@@ -58,6 +58,10 @@ export const RedeemStyled = styled.div`
     letter-spacing: -0.0847059px;
     color: #FFFFFF;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
   }
   >button{
     width: 187px;
@@ -75,5 +79,26 @@ export const RedeemStyled = styled.div`
     &:hover{
       background: #ffffff;
     }
+  }
+`;
+
+export const PriceStyled = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  >h2{
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: -0.0847059px;
+    color: #FFFFFF;
+    padding: .2rem;
+  }
+  >img{
+    padding: .4rem 0 .2rem 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
