@@ -4,16 +4,14 @@ import { Product } from '../../components';
 import usePagination from '../../hooks/usePagination';
 import { ContainerStyled } from './HomeStyle';
 import { sortLowest, sortHighest } from '../../helpers/sort';
+import useUser from '../../context/user/user.context';
 
 const Home = () => {
   const [products, setProducts] = useState({
     status: 'pending...',
     data: [],
   });
-  const [user, setUser] = useState({
-    status: 'pending...',
-    data: [],
-  });
+  const { user } = useUser();
   const productPerPage = 16;
   const [productosTemp, setProductosTemp] = useState([]);
   let dataPagination = usePagination(productosTemp,productPerPage);
@@ -46,7 +44,7 @@ const Home = () => {
         alt={product?.name}
         photo={product?.img?.url}
         cost={product?.cost}
-        UserPoints={user.data.points}
+        UserPoints={user.points}
       />
     );
   });

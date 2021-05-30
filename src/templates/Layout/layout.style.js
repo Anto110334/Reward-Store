@@ -9,5 +9,5 @@ export const StyledHeaderContainer = styled.div`
 `;
 
 export const StyledLayoutChildren = styled.div`
-  padding: 3rem 5rem;
+  padding: 3rem;
 `;
