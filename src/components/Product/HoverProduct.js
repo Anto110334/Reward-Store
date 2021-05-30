@@ -3,9 +3,13 @@ import { DetailContainerStyled,
          IconPayHoverStyled,
          HoverContainerStyled,
          HoverProductContainerStyled,
-         RedeemStyled} from './HoverProduct.style';
+         RedeemStyled,
+         PriceStyled } from './HoverProduct.style';
 
-function HoverProduct() {
+function HoverProduct( props ) {
+  const {
+    cost
+  } = props;
 
   return (
     <HoverProductContainerStyled>
@@ -14,7 +18,10 @@ function HoverProduct() {
         <HoverContainerStyled>
           <IconPayHoverStyled>icono</IconPayHoverStyled>
           <RedeemStyled>
-            <h2>12.000 <span>¤</span></h2>
+            <PriceStyled>
+              <h2>{cost}</h2> 
+              <img alt="coin icon" src="/assets/coin.svg"/>
+            </PriceStyled>
             <button>Redeem now</button>
           </RedeemStyled>
         </HoverContainerStyled>

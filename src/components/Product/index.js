@@ -18,7 +18,8 @@ const Product = props => {
   return (
     <CardContainerStyled lack={lack}>
       {
-        lack ? <LackOfPoint/> :  <HoverProduct/>
+        lack ? <LackOfPoint cost={cost} UserPoints={UserPoints}/> 
+             :  <HoverProduct cost={cost}/>
       }
       <InfoStyled>
         <img alt={alt} src={photo}/>

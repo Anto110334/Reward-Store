@@ -1,9 +1,18 @@
-import { LackOfPointContainerStyled } from './LackOfPoint.style';
+import { LackOfPointContainerStyled,
+         PriceStyled } from './LackOfPoint.style';
 
-function LackOfPoint() {
+function LackOfPoint( props ) {
+    const {
+      cost,
+      UserPoints
+    } = props;
+
     return (
         <LackOfPointContainerStyled>
-            <h2>You need 8000 <span>¤</span></h2>
+            <PriceStyled>
+                <h2>You need {cost - UserPoints}</h2>
+                <img alt="coin icon" src="/assets/coin.svg"/>
+            </PriceStyled>
         </LackOfPointContainerStyled>
     )
 }
