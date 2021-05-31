@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
       }
     }
     getUser();
-  }, []);
+  }, [user]);
 
   return (
     <StyledLayout>
