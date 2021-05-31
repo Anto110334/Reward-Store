@@ -5,11 +5,19 @@ import { DetailContainerStyled,
          HoverProductContainerStyled,
          RedeemStyled,
          PriceStyled } from './HoverProduct.style';
+import redeemData from '../../services/redeem';
 
 function HoverProduct( props ) {
   const {
-    cost
+    cost,
+    productId,
+    setPopupShow
   } = props;
+
+  const handleClickRedeem = (productId) => {
+    redeemData(productId);
+    setPopupShow(prev => !prev);
+  }
 
   return (
     <HoverProductContainerStyled>
@@ -22,7 +30,9 @@ function HoverProduct( props ) {
               <h2>{cost}</h2> 
               <img alt="coin icon" src="/assets/coin.svg"/>
             </PriceStyled>
-            <button>Redeem now</button>
+            <button onClick={()=> handleClickRedeem(productId)}>
+              Redeem now
+            </button>
           </RedeemStyled>
         </HoverContainerStyled>
       </DetailContainerStyled>
