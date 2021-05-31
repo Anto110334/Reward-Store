@@ -1,6 +1,6 @@
 import { DetailContainerStyled,
-         IconPayStyled,
-         IconPayHoverStyled,
+         IconBuyStyled,
+         IconBuyHoverStyled,
          HoverContainerStyled,
          HoverProductContainerStyled,
          RedeemStyled,
@@ -13,10 +13,10 @@ function HoverProduct( props ) {
 
   return (
     <HoverProductContainerStyled>
-      <IconPayStyled>icono</IconPayStyled>
+      <IconBuyStyled alt="buy" src="/assets/buy-blue.svg"/>
       <DetailContainerStyled >
         <HoverContainerStyled>
-          <IconPayHoverStyled>icono</IconPayHoverStyled>
+          <IconBuyHoverStyled alt="buy" src="/assets/buy-white.svg"/>
           <RedeemStyled>
             <PriceStyled>
               <h2>{cost}</h2> 

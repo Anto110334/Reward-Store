@@ -8,23 +8,19 @@ export const DetailContainerStyled = styled.div`
   position: fixed;
 `;
 
-export const IconPayHoverStyled = styled.div`
+export const IconBuyHoverStyled = styled.img`
   width: 42px;
   min-height: 42px;
-  background: #FFFFFF;
-  border-radius: 50%;
   align-self: flex-end;
   z-index: 1;
 `;
 
-export const IconPayStyled = styled.div`
+export const IconBuyStyled = styled.img`
   position: absolute;
   right: 12px;
   top: 12px;
   width: 42px;
   height: 42px;
-  background: radial-gradient(79.85% 79.85% at 50% 50.88%, #0AD4FA 0%, #25BBF1 100%);
-  border-radius: 50%;
   z-index: 0;
 `;
 

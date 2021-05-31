@@ -1,10 +1,14 @@
 import { StyledButton, StyledPoints } from './ovalButton.style';
 
 const OvalButton = props => {
-  const { points, children, variant } = props;
+  const { points, 
+          children, 
+          variant, 
+          active,
+          onClick } = props;
 
   return (
-    <StyledButton variant={variant}>
+    <StyledButton variant={variant} active={active} onClick={onClick}>
       {
         points ?
           <StyledPoints>

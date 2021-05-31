@@ -29,3 +29,11 @@ export const StyledH3 = styled.h3`
   font-size: 1.5rem;
   color: ${baseTheme.colors.darkGrey};
 `;
+
+export const UserMenu = styled.div`
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  user-select: none;
+`;

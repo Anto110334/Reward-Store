@@ -14,8 +14,8 @@ export const StyledButton = styled.button(({ active, variant }) => {
       case 'navbar':
         return (
           css`
-            color: ${active ? baseTheme.colors.white : baseTheme.colors.disabledGrey};
-            background-color: ${active ? baseTheme.colors.lightBlue : baseTheme.colors.lightGrey};
+            color: ${active === "true" ? baseTheme.colors.white : baseTheme.colors.disabledGrey};
+            background-color: ${active == "true" ? baseTheme.colors.lightBlue : baseTheme.colors.lightGrey};
             &:active{
               color: ${baseTheme.colors.white};
               background-color: ${baseTheme.colors.lightBlue};
