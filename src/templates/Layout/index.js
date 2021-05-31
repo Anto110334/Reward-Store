@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
         });
       }
     }
-    getUser();
+    getUser(); //eslint-disable-next-line
   }, [user]);
 
   return (
