@@ -38,17 +38,18 @@ export const StyledNavbarButtonsContainer = styled.div`
 `;
 
 export const StyledNavbarRightContainer = styled.div`
+  min-width: 110px;
   display: flex;
   align-items: center;
-
+  justify-content: space-between;
+  >div{
+    width: 48px;
+    height: 48px;
+  }
   > button {
     border: none;
     outline: none;
     background: none;
     cursor: pointer;
-
-    &:first-child {
-      margin-right: 10px;
-    }
   }
 `;
