@@ -17,6 +17,14 @@ export const StyledLogo = styled.button`
   cursor: pointer;
 `;
 
+export const LeftContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10%;
+  height: 100%;
+`;
+
 export const RightContainer = styled.div`
   display: flex;
   align-items: center;

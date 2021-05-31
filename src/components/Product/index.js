@@ -5,12 +5,14 @@ import { CardContainerStyled,
 
 const Product = props => {
   const {
+    productId,
     name,
     category,
     alt,
     photo,
     cost,
-    UserPoints
+    UserPoints,
+    setPopupShow
   } = props;
 
   const lack = cost >= UserPoints;
@@ -19,7 +21,9 @@ const Product = props => {
     <CardContainerStyled lack={lack}>
       {
         lack ? <LackOfPoint cost={cost} UserPoints={UserPoints}/> 
-             :  <HoverProduct cost={cost}/>
+             :  <HoverProduct cost={cost} 
+                              productId={productId}
+                              setPopupShow={setPopupShow}/>
       }
       <InfoStyled>
         <img alt={alt} src={photo}/>
