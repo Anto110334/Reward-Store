@@ -17,7 +17,7 @@ const Header = props => {
   const [keyActive, setKeyActive] = useState(1);
   const [redirect, setRedirect] = useState(false);
   const navItems = [
-    {id: 1, name: 'Inicio', url: '/Reward-Store'},
+    {id: 1, name: 'Inicio', url: '/Reward-Store/'},
     {id: 2, name: 'Historial', url: '/Reward-Store/historial'},
   ];
 
@@ -62,7 +62,7 @@ const Header = props => {
           disabled={disabled}
         />
       </RightContainer>
-      {redirect && <Redirect to="/Reward-Store"/>}
+      {redirect && <Redirect to="/Reward-Store/"/>}
     </StyledNavbar>
   );
 }
