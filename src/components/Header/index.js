@@ -8,12 +8,14 @@ import { StyledNavbar,
           UserMenu,
           LeftContainer } from './header.style';
 import SelectCoin from '../SelectCoin';
+import { Redirect } from 'react-router-dom';
 
 const Header = props => {
   const history = useHistory();
   const { name, points, children, variant, disabled } = props;
   const [show, setShow] = useState(false);
   const [keyActive, setKeyActive] = useState(1);
+  const [redirect, setRedirect] = useState(false);
   const navItems = [
     {id: 1, name: 'Inicio', url: '/Reward-Store'},
     {id: 2, name: 'Historial', url: '/Reward-Store/historial'},
@@ -22,6 +24,10 @@ const Header = props => {
   const handleClickActivate = (navItem) => {
     setKeyActive(navItem.id);
     history.push(navItem.url);
+  }
+
+  const handleOnClick = () => {
+    setRedirect(true);
   }
 
   const buttons = navItems.map(navItem => (
@@ -37,7 +43,7 @@ const Header = props => {
   return (
     <StyledNavbar>
       <LeftContainer>
-        <StyledLogo><img alt="logo" src="assets/aerolab-logo.svg"/></StyledLogo>
+        <StyledLogo onClick={handleOnClick}><img alt="logo" src="assets/aerolab-logo.svg"/></StyledLogo>
         {buttons}
       </LeftContainer>
       <RightContainer>
@@ -56,6 +62,7 @@ const Header = props => {
           disabled={disabled}
         />
       </RightContainer>
+      {redirect && <Redirect to="/Reward-Store"/>}
     </StyledNavbar>
   );
 }

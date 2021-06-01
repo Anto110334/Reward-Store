@@ -14,11 +14,10 @@ const App = () => {
         <Router>
           <GlobalStyle/>
             <Layout>
-              <Route exact path="/Reward-Store" component={Home}/>
-              <Route exact path="/Reward-Store/historial" component={History}/>
-              <Route exact path="/" render={() => (
-                  <Redirect to="/Reward-Store"/>
-              )}/>
+              <Route exact path="/" component={Home}>
+                <Redirect to= "/Reward-Store"/> 
+              </Route>
+              <Route exact path="/historial" component={History}/>
             </Layout>
         </Router>
       </AppProvider>
