@@ -108,14 +108,14 @@ const Navbar = () => {
         {
           dataPagination.currentPage !== 1
             ? <button onClick={handleClickBack}>
-                <img alt="arrow left" src="/assets/arrow-left.svg"/>
+                <img alt="arrow left" src="assets/arrow-left.svg"/>
               </button>
             : <div></div>
         }
         {
           dataPagination.maxPage !== dataPagination.currentPage 
             ? <button onClick={handleClickNext}>
-                <img alt="arrow right" src="/assets/arrow-right.svg"/>
+                <img alt="arrow right" src="assets/arrow-right.svg"/>
                </button>
             : <div></div>
         }

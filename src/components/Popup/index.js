@@ -7,7 +7,7 @@ const Popup = ({setPopupShow}) => {
   return (
     <PopupMainStyled>
       <ContainerPopupStyled>
-        <IconStyled alt="buy" src="/assets/feliz.svg"/>
+        <IconStyled alt="buy" src="assets/feliz.svg"/>
         <h2>¡Éxito!</h2>
         <p>Canje completado</p>
         <button onClick={()=> setPopupShow(prev => !prev)}>

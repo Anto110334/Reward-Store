@@ -21,14 +21,14 @@ function HoverProduct( props ) {
 
   return (
     <HoverProductContainerStyled>
-      <IconBuyStyled alt="buy" src="/assets/buy-blue.svg"/>
+      <IconBuyStyled alt="buy" src="assets/buy-blue.svg"/>
       <DetailContainerStyled >
         <HoverContainerStyled>
-          <IconBuyHoverStyled alt="buy" src="/assets/buy-white.svg"/>
+          <IconBuyHoverStyled alt="buy" src="assets/buy-white.svg"/>
           <RedeemStyled>
             <PriceStyled>
               <h2>{cost}</h2> 
-              <img alt="coin icon" src="/assets/coin.svg"/>
+              <img alt="coin icon" src="assets/coin.svg"/>
             </PriceStyled>
             <button onClick={()=> handleClickRedeem(productId)}>
               Redeem now

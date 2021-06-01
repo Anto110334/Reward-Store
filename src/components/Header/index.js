@@ -37,7 +37,7 @@ const Header = props => {
   return (
     <StyledNavbar>
       <LeftContainer>
-        <StyledLogo><img alt="logo" src="/assets/aerolab-logo.svg"/></StyledLogo>
+        <StyledLogo><img alt="logo" src="assets/aerolab-logo.svg"/></StyledLogo>
         {buttons}
       </LeftContainer>
       <RightContainer>

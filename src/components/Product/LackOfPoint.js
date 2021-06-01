@@ -11,7 +11,7 @@ function LackOfPoint( props ) {
         <LackOfPointContainerStyled>
             <PriceStyled>
                 <h2>You need {cost - UserPoints}</h2>
-                <img alt="coin icon" src="/assets/coin.svg"/>
+                <img alt="coin icon" src="assets/coin.svg"/>
             </PriceStyled>
         </LackOfPointContainerStyled>
     )
