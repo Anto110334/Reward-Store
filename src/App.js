@@ -14,7 +14,7 @@ const App = () => {
         <Router>
           <GlobalStyle/>
             <Layout>
-              <Route exact path="/" component={Home}/>
+              <Route exact path="/Reward-Store" component={Home}/>
               <Route exact path="/Reward-Store/historial" component={History}/>
             </Layout>
         </Router>

@@ -19,7 +19,7 @@ const Home = () => {
         alt={product?.name}
         photo={product?.img?.url}
         cost={product?.cost}
-        UserPoints={user.points}
+        UserPoints={user?.points}
         setPopupShow={setPopupShow}
       />
     );

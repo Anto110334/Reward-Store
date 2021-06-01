@@ -50,7 +50,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    setProductsPagination(dataPagination);
+    setProductsPagination(dataPagination); //eslint-disable-next-line
   }, [productosTemp, dataPagination.currentPage])
 
   const handleClickBack = () => {
