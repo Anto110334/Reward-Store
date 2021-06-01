@@ -18,7 +18,7 @@ const Header = props => {
   const [redirect, setRedirect] = useState(false);
   const navItems = [
     {id: 1, name: 'Inicio', url: '/Reward-Store'},
-    {id: 2, name: 'Historial', url: '/historial'},
+    {id: 2, name: 'Historial', url: '/Reward-Store/historial'},
   ];
 
   const handleClickActivate = (navItem) => {
