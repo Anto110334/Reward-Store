@@ -13,7 +13,7 @@ const OvalButton = props => {
         points ?
           <StyledPoints>
             {points}
-            <img alt="coin icon" src="/assets/coin.svg"/>
+            <img alt="coin icon" src="assets/coin.svg"/>
           </StyledPoints>
         : children
       }
