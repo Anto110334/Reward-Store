@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from './themes/globalStyle';
 import { AppProvider } from './context';
@@ -14,7 +14,9 @@ const App = () => {
         <Router>
           <GlobalStyle/>
             <Layout>
-              <Route exact path="/" component={Home}/>
+              <Route exact path="/" component={Home}>
+                <Redirect to= "/Reward-Store"/> 
+              </Route>
               <Route exact path="/historial" component={History}/>
             </Layout>
         </Router>
