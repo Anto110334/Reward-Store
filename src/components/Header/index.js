@@ -15,7 +15,7 @@ const Header = props => {
   const [show, setShow] = useState(false);
   const [keyActive, setKeyActive] = useState(1);
   const navItems = [
-    {id: 1, name: 'Inicio', url: '/Reward-Store'},
+    {id: 1, name: 'Inicio', url: '/'},
     {id: 2, name: 'Historial', url: '/Reward-Store/historial'},
   ];
 

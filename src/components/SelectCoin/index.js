@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { ContainerStyled } from './SelectCoin.style';
 import OvalButton from '../OvalButton';
 import pointsData from '../../services/points/index';
